@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #FFF;
+  user-select: none;
+  /*background-image: url('../img/1.jpg');*/
+  cursor: none;/* url('../img/can_cloud.png'), auto;*/
+}
+
+.bg {
+  display: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+#health,
+#chlorine,
+#time,
+#world,
+#info,
+#canv_o,
+#canv_rend
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3vh;
+  opacity: 0.8;
+  font-size: 3vh;
+}
+#health {
+  background: linear-gradient(to right, rgba(255,64,64,0) 0%, rgba(255,64,64,1) 100%);
+}
+#chlorine {
+  top: 3vh;
+  background: linear-gradient(to right, rgba(64,64,255,0) 0%, rgba(64,64,255,1) 100%);
+}
+#time {
+  top: 6vh;
+  background: linear-gradient(to right, rgba(64,255,64,0) 0%, rgba(64,255,64,1) 100%);
+}
+#world {
+  top: 97vh;
+  color: #44F;
+}
+#info {
+  left: 33vw;
+  top: 33vh;
+  font-size: 6vw;
+  color: #000;
+  -webkit-text-stroke: 1px #FFF;
+  opacity: 1;
+}
+
+#canv_o,
+#canv_rend
+{
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+}
