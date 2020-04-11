@@ -163,7 +163,9 @@ function init() {
 	addEventListener( 'resize', onResize, false );
   addEventListener( 'wheel', onWheel, false );
   addEventListener( 'mousedown', onMouseDown, false );
+  addEventListener( 'touchstart', onMouseDown, false );
   addEventListener( 'mouseup', onMouseUp, false );
+  addEventListener( 'touchend', onMouseUp, false );
   addEventListener( 'contextmenu', onRMB, false );
 
   updateScore();
@@ -184,6 +186,7 @@ function init() {
   container.appendChild( dom );
   g.doms.info = dom;
   addEventListener('click', startGame, false);
+  addEventListener('touchstart', startGame, false);
 
 }
 
@@ -207,6 +210,7 @@ function startGame() {
   nextLevel();
   g.doms.info.innerText = '';
   removeEventListener('click', startGame);
+  removeEventListener('touchstart', startGame);
 }
 function nextLevel() {
   g.level++;
@@ -347,6 +351,7 @@ function doObjUpdates() {
       g.level = 0;
       g.doms.info.innerHTML = 'You got the flu<br/>Press LMB to restart';
       addEventListener('click', startGame, false);
+      addEventListener('touchstart', startGame, false);
     }
     // they are still rotating = active
     g.objects[i].rotation.x += 1/100;
